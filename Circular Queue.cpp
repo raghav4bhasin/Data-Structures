@@ -17,14 +17,14 @@ public:
         re = -1;
     }
 
-    void Enqueue()
+    void Enqueue() //Adding New Elements to the rear of queue.
     {
-        if((ft == 0 && re == sizee -1) || (ft == re +1))
+        if((ft == 0 && re == sizee -1) || (ft == re +1)) //OverFlow Condition
         {
             cout << "\tERROR!! The Queue has Overflown and Cannot add any New Elements." << endl;
 
         }
-        else if(ft == -1 && re == -1)
+        else if(ft == -1 && re == -1) //For the first insertion
         {
             ft = 0;
             re = 0;
@@ -32,7 +32,7 @@ public:
             cin >> num;
             q_arr[re] = num;
         }
-        else
+        else //General Case
         {
             cout << "Enter the number to add to the queue: ";
             cin >> num;
@@ -44,9 +44,9 @@ public:
         }
         cout << " " << endl;
     }
-    void Dequeue()
+    void Dequeue() //Removing Elements
     {
-        if(ft == -1 && re == -1)
+        if(ft == -1 && re == -1) //Underflow Condition
         {
             cout  << "\tERROR!! No Elements To Delete." << endl;
         }
