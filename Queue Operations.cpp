@@ -1,4 +1,4 @@
-#include <iostream>
+    #include <iostream>
 #define size_ 5
 using namespace std;
 
@@ -29,7 +29,10 @@ public:
             r = 0;
             f = 0;
             arrQ[r] = num;
-        }
+        }/*
+        It doesn't matter
+        crying for help
+        */
         else
         {
             cout << "Enter the new element: ";
@@ -87,6 +90,14 @@ int main()
        }
    }while(flag == 0);
 }
+
+
+
+
+
+
+
+
 
 
 
