@@ -1,11 +1,11 @@
 #include <iostream>
-#define sizee 5
+#define sizee 7
 using namespace std;
 
 class Q1
 {
 
-
+    int x = 5;
     int q_arr[sizee];
     int ft;
     int re;
@@ -28,6 +28,7 @@ public:
         {
             ft = 0;
             re = 0;
+            line();
             cout << "Enter the number to add to the queue: ";
             cin >> num;
             q_arr[re] = num;
@@ -42,6 +43,10 @@ public:
                 re++;
             q_arr[re] = num;
         }
+        line();
+    }
+    void line()
+    {
         cout << " " << endl;
     }
     void Dequeue() //Removing Elements
@@ -69,7 +74,7 @@ public:
                 ft++;
             }
         }
-        cout << " " << endl;
+        line();
     }
 
 
