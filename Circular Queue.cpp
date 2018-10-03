@@ -47,6 +47,11 @@ public:
     }
     void line()
     {
+        for(int i = 0; i < 18; i++)
+        {    
+            cout << " *-_-* ";
+              
+        }
         cout << " " << endl;
     }
     void Dequeue() //Removing Elements
