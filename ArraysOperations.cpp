@@ -4,7 +4,7 @@ using namespace std;
 class arr_op
 {
     int arr[];
-    int size;
+    int size_;
 
     public:
         void input();
@@ -19,8 +19,8 @@ class arr_op
 
 void arr_op :: input()
 {
-    size = 10;
-    for(int i = 0; i < size; i++)
+    size_ = 10;
+    for(int i = 0; i < size_; i++)
     {
         cout << "Enter the element " << (i+1) << ": ";
         cin >> arr[i];
@@ -32,10 +32,10 @@ void arr_op :: input()
 
 void arr_op :: display()
 {
-    size = 10;
+
     cout << "The stored values are:";
 
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < size_; i++)
     {
         cout << "\t" << arr[i] << endl;
     }
@@ -45,9 +45,9 @@ void arr_op :: display()
 void arr_op ::bubble_sort()
 {
     int p, c, temp;
-    for(p = 1; p<size; p++)
+    for(p = 1; p<size_; p++)
     {
-        for(c = 0; c < size - p; c++)
+        for(c = 0; c < size_ - p; c++)
         {
             if(arr[c] > arr[c+1])
             {
@@ -60,7 +60,7 @@ void arr_op ::bubble_sort()
     cout << " " << endl;
     cout << "Sorted array:" << endl;
     cout << "\t";
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < size_; i++)
         cout << arr[i] << " ";
     cout << " " << endl;
     cout << " " << endl;
@@ -96,7 +96,7 @@ void arr_op :: bin_search_el()
     cout << "Enter the value to search in the array: ";
     cin >> val;
     beg = 0;
-    endd = size-1;
+    endd = size_-1;
     while(beg <= endd)
     {
         mid = (beg + endd)/2;

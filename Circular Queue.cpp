@@ -1,11 +1,11 @@
 #include <iostream>
-#define sizee 7
+#define sizee 5
 using namespace std;
 
 class Q1
 {
 
-    int x = 5;
+
     int q_arr[sizee];
     int ft;
     int re;
@@ -17,23 +17,22 @@ public:
         re = -1;
     }
 
-    void Enqueue() //Adding New Elements to the rear of queue.
+    void Enqueue()
     {
-        if((ft == 0 && re == sizee -1) || (ft == re +1)) //OverFlow Condition
+        if((ft == 0 && re == sizee -1) || (ft == re +1))
         {
             cout << "\tERROR!! The Queue has Overflown and Cannot add any New Elements." << endl;
 
         }
-        else if(ft == -1 && re == -1) //For the first insertion
+        else if(ft == -1 && re == -1)
         {
             ft = 0;
             re = 0;
-            line();
             cout << "Enter the number to add to the queue: ";
             cin >> num;
             q_arr[re] = num;
         }
-        else //General Case
+        else
         {
             cout << "Enter the number to add to the queue: ";
             cin >> num;
@@ -43,20 +42,11 @@ public:
                 re++;
             q_arr[re] = num;
         }
-        line();
-    }
-    void line()
-    {
-        for(int i = 0; i < 18; i++)
-        {    
-            cout << " *-_-* ";
-              
-        }
         cout << " " << endl;
     }
-    void Dequeue() //Removing Elements
+    void Dequeue()
     {
-        if(ft == -1 && re == -1) //Underflow Condition
+        if(ft == -1 && re == -1)
         {
             cout  << "\tERROR!! No Elements To Delete." << endl;
         }
@@ -79,7 +69,7 @@ public:
                 ft++;
             }
         }
-        line();
+        cout << " " << endl;
     }
 
 
