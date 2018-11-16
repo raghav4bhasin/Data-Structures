@@ -13,13 +13,13 @@ cout<<"Please enter for undirected grah"<<endl;
         cout<<"Please enter within range"<<endl;
         else
         {
-    while(x!=-1&&y!=-1)
-    {
-        a[x][y]=1;
-        a[y][x]=1;
-        cin>>x>>y;
+         while(x!=-1&&y!=-1)
+         {
+             a[x][y]=1;
+             a[y][x]=1;
+             cin>>x>>y;
 
-    }
+         }
     }
 
 cout <<"enter initial vertex";
